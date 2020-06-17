@@ -2,8 +2,6 @@ template<class T, class K = T>
 class AbstractSegmentTree {
     
 protected:
-    vector<T> _value;
-
     AbstractSegmentTree(vector<K> &arr) {
         if (arr.empty()) {
             throw "Cannot create segment tree of size 0";
@@ -30,7 +28,7 @@ protected:
     }
     
 private:
-    
+    vector<T> _value;
     int _size;
     
     int getLeftChildIndex(int n) {
